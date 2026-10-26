@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101512">
   <meta name="description" content="Portfólio de bordalofelipe, estudante de Engenharia Eletrônica e de Computação na UFRJ.">
-  <title>bordalofelipe — Portfólio</title>
+  <title>Felipe Bordalo — Portfólio</title>
   <style>
     :root {
       color-scheme: dark;
@@ -51,11 +51,23 @@
     }
 
     .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       color: var(--accent);
       font-size: 1.05rem;
       font-weight: 750;
       letter-spacing: -0.04em;
       text-decoration: none;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 25%;
     }
 
     nav {
@@ -80,10 +92,6 @@
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(230px, 0.7fr);
-      align-items: center;
-      gap: 64px;
       padding-bottom: 92px;
     }
 
@@ -134,61 +142,6 @@
     .button:focus-visible {
       color: var(--accent);
       background: transparent;
-    }
-
-    .profile-card {
-      position: relative;
-      display: grid;
-      min-height: 290px;
-      align-content: end;
-      padding: 24px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background:
-        radial-gradient(ellipse at 70% 20%, rgb(193 240 120 / 15%), transparent 48%),
-        var(--surface);
-    }
-
-    .profile-card::before {
-      position: absolute;
-      top: 34px;
-      right: 28px;
-      width: 130px;
-      height: 130px;
-      border: 1px solid rgb(193 240 120 / 45%);
-      border-radius: 50%;
-      content: "";
-    }
-
-    .profile-card::after {
-      position: absolute;
-      top: 57px;
-      right: 52px;
-      width: 84px;
-      height: 84px;
-      border: 1px solid rgb(193 240 120 / 35%);
-      border-radius: 50%;
-      content: "";
-    }
-
-    .card-label {
-      position: relative;
-      z-index: 1;
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .card-title {
-      position: relative;
-      z-index: 1;
-      max-width: 220px;
-      margin: 7px 0 0;
-      font-size: 1.4rem;
-      line-height: 1.25;
     }
 
     section {
@@ -278,13 +231,7 @@
       }
 
       .hero {
-        grid-template-columns: 1fr;
-        gap: 38px;
         padding-bottom: 62px;
-      }
-
-      .profile-card {
-        min-height: 220px;
       }
 
       .section-heading {
@@ -312,7 +259,10 @@
 <body>
   <div class="page">
     <header>
-      <a class="wordmark" href="#inicio">bordalofelipe</a>
+      <a class="wordmark" href="#inicio">
+        <img class="avatar" src="IMG_Felipe.jpg" alt="" width="44" height="44">
+        Felipe Bordalo
+      </a>
       <nav aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#interesses">Interesses</a>
@@ -324,16 +274,12 @@
       <div class="hero">
         <div>
           <p class="eyebrow">Portfólio pessoal</p>
-          <h1>Olá, eu sou <span>bordalofelipe.</span></h1>
+          <h1>Olá, eu sou <span>Felipe Bordalo.</span></h1>
           <p class="intro">Estudante de Engenharia Eletrônica e de Computação na UFRJ, interessado em tecnologia, computação e processamento de áudio.</p>
           <a class="button" href="https://github.com/bordalofelipe" target="_blank" rel="noopener noreferrer">
             Visite meu GitHub <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <aside class="profile-card" aria-label="Área de estudo">
-          <p class="card-label">Em formação</p>
-          <p class="card-title">Engenharia Eletrônica e de Computação</p>
-        </aside>
       </div>
 
       <section id="sobre">
