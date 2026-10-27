@@ -10,7 +10,6 @@
     :root {
       color-scheme: dark;
       --background: #0c111b;
-      --surface: #141b29;
       --text: #f2f0ea;
       --muted: #9aa4b5;
       --accent: #f2b84b;
@@ -95,13 +94,19 @@
       padding-bottom: 92px;
     }
 
+    .eyebrow,
+    .timeline-date,
+    .contact-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
     .eyebrow {
       margin: 0 0 18px;
       color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 700;
       letter-spacing: 0.16em;
-      text-transform: uppercase;
     }
 
     h1 {
@@ -198,6 +203,36 @@
       text-underline-offset: 4px;
     }
 
+    .contacts {
+      margin: 24px 0 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .contacts a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      transition: color 160ms ease;
+    }
+
+    .contacts a:hover,
+    .contacts a:focus-visible {
+      color: var(--accent);
+    }
+
+    .contacts .contact-handle {
+      color: var(--muted);
+      font-size: 0.92rem;
+      overflow-wrap: anywhere;
+      text-align: right;
+    }
+
     .section-content p.timeline-context {
       margin: 0 0 28px;
       padding-bottom: 20px;
@@ -213,6 +248,10 @@
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+
+    .timeline:not(:last-child) {
+      margin-bottom: 40px;
     }
 
     .timeline::before {
@@ -248,10 +287,6 @@
 
     .timeline-date {
       color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
     }
 
     .timeline h3 {
@@ -338,22 +373,20 @@
 
     <main id="inicio">
       <div class="hero">
-        <div>
-          <p class="eyebrow">Portfólio pessoal</p>
-          <h1>Olá, eu sou <span>Felipe Bordalo.</span></h1>
-          <p class="intro">Estudante de Engenharia Eletrônica e de Computação na UFRJ, interessado em eletrônica, computação, Big Data e processamento de áudio.</p>
-          <a class="button" href="https://github.com/bordalofelipe" target="_blank" rel="noopener noreferrer">
-            Visite meu GitHub <span aria-hidden="true">↗</span>
-          </a>
-        </div>
+        <p class="eyebrow">Portfólio pessoal</p>
+        <h1>Olá, eu sou <span>Felipe Bordalo.</span></h1>
+        <p class="intro">Estudante de Engenharia Eletrônica e de Computação na UFRJ, interessado em eletrônica, computação, Big Data e processamento de áudio.</p>
+        <a class="button" href="https://github.com/bordalofelipe" target="_blank" rel="noopener noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
       </div>
 
       <section id="sobre">
         <div class="section-heading">
           <h2>Sobre mim</h2>
           <div class="section-content">
-            <p>Sou estudante de graduação em Engenharia Eletrônica e de Computação na Universidade Federal do Rio de Janeiro (UFRJ).</p>
-            <p>Também faço parte do Grupo de Processamento de Áudio (GPA), no laboratório SMT.</p>
+            <p>Sou estudante de graduação em Engenharia Eletrônica e de Computação na Universidade Federal do Rio de Janeiro (UFRJ) com dupla-diplomação em Matemática pelo Instituto de Matemática da UFRJ.</p>
+            <p>Fiz estágio no Laboratório de Matemática Aplicada (LabMA/UFRJ) por 4 períodos na área de saneamento e modelagem de dados. Atualmente faço parte do Grupo de Processamento de Áudio (GPA), no laboratório SMT, onde desenvolvo pesquisas em áudio espacial e auralização.</p>
           </div>
         </div>
       </section>
@@ -377,7 +410,6 @@
                 <p>Pesquisas em Áudio Espacial e auralização com caixas acústicas.</p>
               </li>
             </ol>
-            <br>
             <!--<p class="timeline-context">
               <strong>Mestrado em Engenharia Elétrica</strong> · UFRJ · 2028 - atual
             </p>
@@ -402,6 +434,7 @@
               <li>Eletrônica</li>
               <li>Computação</li>
               <li>Matemática</li>
+              <li>Xadrez</li>
             </ul>
           </div>
         </div>
@@ -424,9 +457,35 @@
 
       <section id="contato">
         <div class="section-heading">
-          <h2>Vamos conversar?</h2>
+          <h2>Contato</h2>
           <div class="section-content">
             <p>Confira meus projetos e acompanhe meu trabalho no <a class="contact-link" href="https://github.com/bordalofelipe" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+            <ul class="contacts">
+              <li>
+                <a href="https://github.com/bordalofelipe" target="_blank" rel="noopener noreferrer">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-handle">@bordalofelipe ↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://lattes.cnpq.br/9837541489499538" target="_blank" rel="noopener noreferrer">
+                  <span class="contact-label">Lattes</span>
+                  <span class="contact-handle">Ver currículo ↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/bordalofelipe2019" target="_blank" rel="noopener noreferrer">
+                  <span class="contact-label">Instagram</span>
+                  <span class="contact-handle">@bordalofelipe2019 ↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://chess.com/member/bordalofelipe" target="_blank" rel="noopener noreferrer">
+                  <span class="contact-label">Chess.com</span>
+                  <span class="contact-handle">@bordalofelipe ↗</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -434,7 +493,7 @@
 
     <footer>
       <span>bordalofelipe</span>
-      <span>Feito com curiosidade e código.</span>
+      <span>Feito com ❤️.</span>
     </footer>
   </div>
 </body>
