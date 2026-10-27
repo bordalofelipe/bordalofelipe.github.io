@@ -174,7 +174,7 @@
       margin-top: 14px;
     }
 
-    .skills {
+    .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -183,7 +183,7 @@
       list-style: none;
     }
 
-    .skills li {
+    .chips li {
       padding: 7px 12px;
       border: 1px solid var(--line);
       border-radius: 999px;
@@ -196,6 +196,71 @@
       font-weight: 650;
       text-decoration-thickness: 1px;
       text-underline-offset: 4px;
+    }
+
+    .section-content p.timeline-context {
+      margin: 0 0 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-context strong {
+      color: var(--text);
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline::before {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 4px;
+      width: 1px;
+      background: var(--line);
+      content: "";
+    }
+
+    .timeline li {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline li + li {
+      margin-top: 32px;
+    }
+
+    .timeline li::before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--background);
+      content: "";
+    }
+
+    .timeline-date {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .timeline h3 {
+      margin: 4px 0 0;
+      font-size: 1.05rem;
+    }
+
+    .timeline p {
+      margin: 4px 0 0;
     }
 
     footer {
@@ -265,6 +330,7 @@
       </a>
       <nav aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
+        <a href="#trajetoria">Trajetória</a>
         <a href="#interesses">Interesses</a>
         <a href="#tecnologias">Tecnologias</a>
       </nav>
@@ -275,7 +341,7 @@
         <div>
           <p class="eyebrow">Portfólio pessoal</p>
           <h1>Olá, eu sou <span>Felipe Bordalo.</span></h1>
-          <p class="intro">Estudante de Engenharia Eletrônica e de Computação na UFRJ, interessado em tecnologia, computação e processamento de áudio.</p>
+          <p class="intro">Estudante de Engenharia Eletrônica e de Computação na UFRJ, interessado em eletrônica, computação, Big Data e processamento de áudio.</p>
           <a class="button" href="https://github.com/bordalofelipe" target="_blank" rel="noopener noreferrer">
             Visite meu GitHub <span aria-hidden="true">↗</span>
           </a>
@@ -292,11 +358,40 @@
         </div>
       </section>
 
+      <section id="trajetoria">
+        <div class="section-heading">
+          <h2>Trajetória</h2>
+          <div class="section-content">
+            <p class="timeline-context">
+              <strong>Engenharia Eletrônica e de Computação</strong> · UFRJ · 2022 - atual
+            </p>
+            <ol class="timeline">
+              <li>
+                <span class="timeline-date">2023 - 2024</span>
+                <h3>Laboratório de Matemática Aplicada (LabMA/UFRJ)</h3>
+                <p>Tratamento de dados e produção de tábuas biométricas.</p>
+              </li>
+              <li>
+                <span class="timeline-date">2024 - atual</span>
+                <h3>Grupo de Processamento de Áudio (GPA) - Laboratório SMT</h3>
+                <p>Pesquisas em Áudio Espacial e auralização com caixas acústicas.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <section id="interesses">
         <div class="section-heading">
           <h2>Interesses</h2>
           <div class="section-content">
-            <p>Meu percurso acadêmico conecta engenharia, computação e processamento de áudio. Quero seguir aprendendo e explorar ideias que unam essas áreas.</p>
+            <ul class="chips" aria-label="Interesses">
+              <li>Big Data</li>
+              <li>Áudio</li>
+              <li>Eletrônica</li>
+              <li>Computação</li>
+              <li>Matemática</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -305,7 +400,7 @@
         <div class="section-heading">
           <h2>Linguagens</h2>
           <div class="section-content">
-            <ul class="skills" aria-label="Linguagens de programação">
+            <ul class="chips" aria-label="Linguagens de programação">
               <li>Python</li>
               <li>C / C++</li>
               <li>JavaScript</li>
